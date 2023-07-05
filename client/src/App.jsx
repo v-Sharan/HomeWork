@@ -20,7 +20,7 @@ const App = () => {
   const handleClick = (data) => {
     setLoading(true);
     axios
-      .post("http://localhost:8080/form/bmi", data)
+      .post("https://intern-km3f.onrender.com/form/bmi", data)
       .then((res) => {
         setIsopen(true);
         setMessage(res?.data?.message);
