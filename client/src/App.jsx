@@ -20,7 +20,7 @@ const App = () => {
   const handleClick = (data) => {
     setLoading(true);
     axios
-      .post("https://intern-km3f.onrender.com/form", data)
+      .post("http://localhost:8080/form/bmi", data)
       .then((res) => {
         setIsopen(true);
         setMessage(res?.data?.message);
@@ -130,6 +130,7 @@ const App = () => {
                     }`}
                   >
                     <option value="form">Form</option>
+                    <option value="BMI Home work">BMI Home work</option>
                   </select>
                   {errors.type && (
                     <p className="text-red-600">{errors?.type?.message}</p>
